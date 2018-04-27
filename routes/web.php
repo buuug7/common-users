@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware(['auth'])->group(function (){
+
+    // developers  passport
+    Route::get('/settings/developer/passport', function () {
+        return view('settings.developer.passport');
+    });
+
+});
