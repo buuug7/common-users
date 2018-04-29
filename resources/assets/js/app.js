@@ -24,6 +24,9 @@ Vue.component('passport-clients',passportClients);
 Vue.component('passport-authorized-clients',passportAuthorizedClients);
 Vue.component('passport-personal-access-tokens',passportPersonalAccessTokens);
 
+import imageUpload from './components/ImageUpload.vue';
+Vue.component('image-upload',imageUpload);
+
 
 const app = new Vue({
     el: '#app'

@@ -12,18 +12,38 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('home');
 });
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::middleware(['auth'])->group(function (){
+Route::middleware(['auth'])->group(function () {
 
     // developers  passport
     Route::get('/settings/developer/passport', function () {
         return view('settings.developer.passport');
     });
 
+});
+
+
+// for test
+Route::get('/test', function () {
+    return view('test');
+});
+
+Route::post('/test-upload', function (\Illuminate\Http\Request $request) {
+
+    $croppedImage = $request->file('croppedImage');
+
+    $link = Storage::disk('public')->put('avatars', $croppedImage);
+
+    $url = asset('storage/' . $link);
+
+    return json_encode([
+        'url' => $url,
+    ]);
 });
