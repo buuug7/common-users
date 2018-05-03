@@ -27,6 +27,9 @@ Route::middleware(['auth'])->group(function () {
         return view('settings.developer.passport');
     });
 
+    // profile
+    Route::get('/settings/profile', 'User\UserController@profile');
+
 });
 
 
@@ -35,15 +38,4 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::post('/test-upload', function (\Illuminate\Http\Request $request) {
 
-    $croppedImage = $request->file('croppedImage');
-
-    $link = Storage::disk('public')->put('avatars', $croppedImage);
-
-    $url = asset('storage/' . $link);
-
-    return json_encode([
-        'url' => $url,
-    ]);
-});

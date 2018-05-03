@@ -51,6 +51,7 @@
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('/settings/developer/passport') }}">@lang('custom.developer')</a>
+                                    <a class="dropdown-item" href="{{ url('/settings/profile') }}">@lang('custom.profile')</a>
                                     
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
