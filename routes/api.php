@@ -15,7 +15,11 @@ use Illuminate\Http\Request;
 
 Route::middleware(['auth:api'])->group(function () {
 
-    Route::post('/user/avatar/update','User\AvatarController@update');
+    Route::post('/user/avatar/update', 'User\AvatarController@update');
+
+    Route::get('/user/profile','User\UserController@showProfile');
+
+    Route::put('/user/profile/update', 'User\UserController@updateProfile');
 
 });
 

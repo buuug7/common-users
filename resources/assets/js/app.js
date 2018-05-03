@@ -28,6 +28,9 @@ import imageUpload from './components/ImageUpload.vue';
 Vue.component('image-upload',imageUpload);
 
 
+import userProfile from './components/UserProfile.vue';
+Vue.component('user-profile',userProfile);
+
 const app = new Vue({
     el: '#app'
 });
