@@ -14,6 +14,7 @@ class CreateUserProfilesTable extends Migration
     public function up()
     {
         Schema::create('user_profiles', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('user_id')->comment('user table id');
             $table->string('avatar_url')->nullable()->comment('avatar url');
             $table->string('website')->nullable()->comment('website url');

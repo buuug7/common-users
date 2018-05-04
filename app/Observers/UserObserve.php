@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\User;
+use App\UserProfile;
 
 class UserObserve
 {

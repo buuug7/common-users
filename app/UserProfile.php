@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserProfile extends Model
 {
-    protected $primaryKey = false;
     //
     protected $table = 'user_profiles';
 

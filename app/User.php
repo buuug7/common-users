@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Storage;
 use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
@@ -30,6 +31,10 @@ class User extends Authenticatable
 
     public function profile(){
         return $this->hasOne(UserProfile::class);
+    }
+
+    public function getAvatar(){
+        return Storage::url($this->profile->avatar_url);
     }
 
 }
