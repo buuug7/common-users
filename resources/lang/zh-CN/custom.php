@@ -5,4 +5,5 @@ return [
     'profile' => '个人资料',
     'avatar' => '头像',
     'logout' => '登出',
+    'dashboard' => '仪表盘',
 ];
