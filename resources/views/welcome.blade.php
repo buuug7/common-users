@@ -61,19 +61,11 @@
 
 	<div class="container my-5">
 		<div class="row">
-			<div class="col-lg-3 col-md-6">
-				<div class="card text-center">
-					<div class="card-header">
-						Featured
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">Special title treatment</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-					<div class="card-footer text-muted">
-						2 days ago
-					</div>
+			<div class="col-lg-3 col-md-6 bg-white">
+				<div class="text-center p-3">
+					<h3 class="title">Problem?</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores cumque, error
+					   mollitia nemo ut!</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
