@@ -1,20 +1,90 @@
-.hero{
+// copy from Bulma
+
+.hero {
   align-items: stretch;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  .hero-foot, .hero-head {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .hero-body {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+  }
+
+  // navbar
+  .navbar {
+    background: none;
+  }
+  @media screen and (max-width: map_get($grid-breakpoints, lg)) {
+    .navbar {
+      @include box-shadow-1;
+    }
+  }
+  .navbar .navbar-toggler {
+    border-color: transparent !important;
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  // nav
+  .nav {
+    .nav-link {
+      color: $gray-900;
+    }
+    .nav-link.active {
+      background-color: #f2f2f2;
+    }
+  }
+
+  // size
+  &.is-small {
+    .hero-body {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &.is-medium {
+    @media screen and (min-width: map_get($grid-breakpoints, md)) {
+      .hero-body {
+        padding-bottom: 9rem;
+        padding-top: 9rem;
+      }
+    }
+  }
+
+  &.is-large {
+    @media screen and (min-width: map_get($grid-breakpoints, md)) {
+      .hero-body {
+        padding-bottom: 18rem;
+        padding-top: 18rem;
+      }
+    }
+  }
+
+  // background
+  &.bg-has-white {
+    background: #fff;
+  }
+
+  &.bg-has-black {
+    color: #fff;
+    background: #222;
+    .title, .subtitle, .nav-link, .navbar-brand, .btn {
+      color: #fff;
+    }
+    .btn {
+      border-color: #fff;
+    }
+  }
 }
 
 
-.hero-foot, .hero-head {
-  flex-grow: 0;
-  flex-shrink: 0;
-}
 
-.hero-body {
-  flex-grow: 1;
-  flex-shrink: 0;
-  padding: 3rem 1.5rem;
-}
-
-@me

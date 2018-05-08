@@ -12,15 +12,22 @@
 */
 
 Route::get('/', function () {
-    return redirect('home');
+    if(\Illuminate\Support\Facades\Auth::check()){
+        return redirect('home');
+    }
+    return redirect('welcome');
 });
 
 Auth::routes();
 
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth'])->group(function () {
+
+    Route::get('/home', 'HomeController@index')->name('home');
 
     // developers  passport
     Route::get('/settings/developer/passport', function () {
