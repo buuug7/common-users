@@ -3,7 +3,7 @@
 @extends('layouts.base')
 @section('content')
 
-	<div class="hero is-small bg-has-white">
+	<div class="hero is-medium bg-has-white">
 		<div class="hero-head">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">

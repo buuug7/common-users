@@ -54,8 +54,8 @@
   &.is-medium {
     @media screen and (min-width: map_get($grid-breakpoints, md)) {
       .hero-body {
-        padding-bottom: 9rem;
-        padding-top: 9rem;
+        padding-bottom: 8rem;
+        padding-top: 8rem;
       }
     }
   }
