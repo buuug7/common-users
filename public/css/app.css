@@ -10398,6 +10398,41 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.news-card {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.news-card .news-card__space {
+  margin: 0 0.5rem;
+}
+
+.news-card .news-card__content {
+  padding: 2rem 2rem;
+  max-height: 50rem;
+}
+
+.news-card .news-card__title {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.1;
+  height: 2rem;
+  overflow: hidden;
+}
+
+.news-card .news-card__description {
+  line-height: 1.2;
+  height: 8rem;
+  overflow: hidden;
+}
+
+.news-card:hover {
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;

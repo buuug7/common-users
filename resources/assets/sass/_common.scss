@@ -4,3 +4,39 @@
 .box-shadow-2{
   @include box-shadow-2;
 }
+
+
+.news-card{
+  transition: all 0.5s ease;
+  .news-card__space{
+    margin:0 0.5rem;
+  }
+  .news-card__content{
+    padding:2rem 2rem;
+    max-height: 50rem;
+  }
+  .news-card__title{
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    color:#333;
+    line-height: 1.1;
+    height:2rem;
+    overflow: hidden;
+  }
+  .news-card__author{
+    >a{
+      //
+    }
+  }
+
+  .news-card__description{
+    line-height: 1.2;
+    height: 8rem;
+    overflow: hidden;
+  }
+
+  &:hover{
+    transform: translateY(15px);
+  }
+}
